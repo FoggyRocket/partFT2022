@@ -1,5 +1,10 @@
 const express = require("express");
 const hbs  = require("hbs");
+//importar mi punkAPI
+const PunkAPIWrapper = require("punkapi-javascript-wrapper")
+
+//la invocamos instanciamos
+const punkApi = new PunkAPIWrapper()
 
 const app = express()
 
@@ -75,6 +80,20 @@ app.get("/singlePlayer",(req,res,next)=>{
     }
 
     res.render("singlePlayer", { player })
+})
+//ejemplo consumo api beers
+
+app.get("/beers",(req,res,next)=>{
+
+    punkApi.getBeers()
+    .then((beers)=>{
+        console.log("beerrs",beers)
+        res.render("beers",{ beers })
+     })
+     .catch(error=>{
+         console.log("Que es?",error)
+         res.send("Error: 500")
+     })
 })
 
 //Listen
