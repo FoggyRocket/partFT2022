@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Esto sera una vista dinamica!!!</h1>
+    <h2>Hola {{name}}</h2>
+    <p>Tu edad es {{age}}</p>
+    {{!-- if hbs --}}
+    
+    {{#if pet}}{{!--abrimos el bloque if  --}}
+        <div>
+           {{{pet.name}}}
+            <p>Tiene la edad de {{pet.age}}
+                y es de raza {{pet.breed}}
+            </p>
+        </div>
+    {{else}}
+        <div>
+            <p>No tiene mascota</p>
+        </div>
+    {{/if}}{{!--cerramos  --}}
+
+    {{!-- unless hbs --}}
+    {{#unless moto}}
+        <div>
+            <span>Una monedita porfavor D: !!!</span>
+        </div>
+    {{/unless}}
+
+    <div>
+        <p>Comida Favorita</p>
+        <ul>
+            {{#each foodFavorite}}
+                <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <div>
+        <p>Lista de amigos</p>
+        <ul>
+            {{#each friends}}
+                <li>{{this.name}} y su edad es:{{this.age}} </li>
+            {{/each}}
+        </ul>
+        
+    </div>
+</body>
+</html>
