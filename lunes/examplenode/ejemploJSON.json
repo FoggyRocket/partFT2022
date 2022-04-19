@@ -1,0 +1,23 @@
+{
+  "name": "examplenode",
+  "version": "0.0.1",
+  "description": "Mi primer package json creado a mano",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/www.github.com/foggyrocket.git"
+  },
+  "keywords": [
+    "azar",
+    "mujerzuelas"
+  ],
+  "author": "Foggyrocket",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/www.github.com/foggyrocket/issues"
+  },
+  "homepage": "https://github.com/www.github.com/foggyrocket#readme"
+}
