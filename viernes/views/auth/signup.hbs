@@ -1,0 +1,17 @@
+<h1>Signup</h1>
+{{!-- 
+    action = es la ruta hacia donde va a mandar la solicitud = (req)
+    method = es el verb (GET POST)
+    GET es utilizado para solicitar info y mandar ?s=valor query params
+    POST es utilizado para mandar informacion sensible 
+  --}}
+<form action="/user/signup" method="POST">
+    <label>Email</label>
+    <input type="email" required name="email" >
+    <label>Password:</label>
+    <input type="password" required name="password">
+    <label>username</label>
+    <input type="text" required name="username">
+
+    <button type="submit" >Signup</button>
+</form>
